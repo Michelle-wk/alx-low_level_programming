@@ -1,19 +1,24 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - main block
- * Use putchar function to print the alphabet in lowercase
- * return: 0
+ * print_alphabet_x10 - print the alphabet 10 times in lowercase,
+ * followed by a new line
  */
-int main(void )
+void print_alphabet_x10(void)
 {
-	char c = 'a';
+	char ch;
+	int i;
 
-	while (c <= 'z')
+	i = 0;
+
+	while (i < 10)
+	{
+		ch = 'a';
+		while (ch <= 'z')
 		{
-		putchar(c);
-		c++;
+			_putchar(ch);
+			ch++;
+		}
+		_putchar('\n');
+		i++;
 	}
-	putchar('\n');
-
-	return (0);
 }
