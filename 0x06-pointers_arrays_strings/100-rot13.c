@@ -6,19 +6,38 @@
  * Return: string `s` rotated
  */
 
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int i;
-	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char storel[] = "nopqrstuvwxyzabcdefghijklm";
-
-	for (i = 0; s[i] != '\0'; i++)
+	int ind1 = 0, ind2;
+	char alphabet[52] = {'A', 'B', 'C', 'D', 'E', 'F',
+				'G', 'H', 'I', 'J', 'K', 'L',
+				'M', 'N', 'O', 'P', 'Q', 'R',
+				'S', 'T', 'U', 'V', 'W', 'X',
+				'Y', 'Z', 'a', 'b', 'c', 'd',
+				'e', 'f', 'g', 'h', 'i', 'j',
+				'k', 'l', 'm', 'n', 'o', 'p',
+				'q', 'r', 's', 't', 'u', 'v',
+				'w', 'x', 'y', 'z'};
+	char rot13key[52] = {'N', 'O', 'P', 'Q', 'R', 'S',
+				'T', 'U', 'V', 'W', 'X', 'Y',
+				'Z', 'A', 'B', 'C', 'D', 'E',
+				'F', 'G', 'H', 'I', 'J', 'K',
+				'L', 'M', 'n', 'o', 'p', 'q',
+				'r', 's', 't', 'u', 'v', 'w',
+				'x', 'y', 'z', 'a', 'b', 'c',
+				'd', 'e', 'f', 'g', 'h', 'i',
+				'j', 'k', 'l', 'm'};
+	while (str[ind1])
 	{
-		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		for (ind2 = 0; ind2 < 52; ind2++)
 		{
-			s[i] = (s[i] - 65 > 25) ?
-				storel[s[i] - 97] : storeh[s[i] - 65];
+			if (str[ind1] == alphabet[ind2])
+			{
+				str[ind1] = rot13key[ind2];
+				break;
+			}
 		}
+		ind1++;
 	}
-	return (s);
+	return (str);
 }
