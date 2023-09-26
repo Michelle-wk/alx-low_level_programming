@@ -15,23 +15,31 @@
 
 int main(void)
 {
-	int i, j, k;
+	int i = '0';
+	int j = '0';
 
-	for (i = 0; i < 100; i++)
+	while (i <= '9')
 	{
-		j = i / 10;
-		k = i % 10;
-
-		putchar(j + '0');
-		putchar(k + '0');
-
-		if (i < 99)
+		while (j <= '9')
 		{
-			putchar(44);
-			putchar(32);
+			if (!(i > j || i == j))
+			{
+				putchar(i);
+				putchar(j);
+				if (i == '8' && j == '9')
+				{
+					putchar('\n');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			j++;
 		}
+		j = '0';
+		i++;
 	}
-	putchar('\n');
-
 	return (0);
 }
