@@ -4,7 +4,8 @@
  * Print all possible combinations of two two-digit numbers from 0 to 99
  * Separated by a space
  * Printed as two digits eg. 1 should be printed as 01.
- * Combination of numbers must be separated by a comma followed by a space in ascending order.
+ * Combination of numbers must be separated by a comma
+ * followed by a space in ascending order.
  * `00 01` and `01 00` are considered as the same combination.
  * Only use `putchar` to print to console.
  * Only use `putchar` up to 8 times.
