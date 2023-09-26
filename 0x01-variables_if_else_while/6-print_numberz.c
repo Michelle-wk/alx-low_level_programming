@@ -1,10 +1,9 @@
 #include <stdio.h>
 /**
- * main - prints numbers 0-9 without the use of char, printf, puts
+ * main - prints numbers 0-9 without the use of char/printf/puts
  * and putchar 2x max
- * Return: 0 
+ * Return: 0
  */
-
 int main(void)
 {
 	int i = '0';
