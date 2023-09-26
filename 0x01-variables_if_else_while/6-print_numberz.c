@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - main block
- * print all single digit numbers of base 10 starting from 0, followed by a new line.
- * Return: 0
+ * main - prints numbers 0-9 without the use of char, printf, puts
+ * and putchar 2x max
+ * Return: 0 
  */
 
 int main(void)
