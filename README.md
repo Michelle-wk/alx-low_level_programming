@@ -1,1 +1,1 @@
- pointers, arrays and strings
+Automatic and dynamic allocation, malloc and free
